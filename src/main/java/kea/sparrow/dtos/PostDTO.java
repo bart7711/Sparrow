@@ -16,12 +16,12 @@ public class PostDTO {
     private int id;
     private String text;
     private List<String> hashtag = new ArrayList<>();
-    private String userId;
+    private UserDTO user;
 
-    public PostDTO(int id, String text, List<String> hashtag, String userId) {
+    public PostDTO(int id, String text, List<String> hashtag, UserDTO user) {
         this.id = id;
         this.text = text;
         this.hashtag = hashtag;
-        this.userId = userId;
+        this.user = user;
     }
 }
