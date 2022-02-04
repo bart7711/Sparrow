@@ -10,6 +10,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class DTOConverter {
     ModelMapper modelMapper;
@@ -38,6 +41,12 @@ public class DTOConverter {
             post.setUser(convertToUser(postDTO.getUser()));
             return post;
 
+    }
+
+    public List<PostDTO> convertToListOfPostDTOs(List<Post> posts) {
+        return posts.stream()
+                .map(this::convertToPostDTO)
+                .collect(Collectors.toList());
     }
 
 }
