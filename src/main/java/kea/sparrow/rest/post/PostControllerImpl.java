@@ -34,9 +34,9 @@ public class PostControllerImpl implements PostControllerInterface {
     }
 
     @Override
-    public PostDTO createPost(PostDTO postDTO) {
+    public PostDTO createPost(String text, String username) {
         return dtoConverter.convertToPostDTO(postService
-                .createPost(dtoConverter.convertToPost(postDTO)));
+                .createPost(text,username));
     }
 
     @Override

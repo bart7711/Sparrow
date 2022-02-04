@@ -13,9 +13,9 @@ public interface PostControllerInterface {
     @GetMapping("/{id}")
     PostDTO getById(@PathVariable int id);
 
-    @PostMapping
+    @PostMapping("/user/{username}")
     @ResponseStatus(HttpStatus.CREATED)
-    PostDTO createPost(@RequestBody PostDTO postDTO);
+    PostDTO createPost(@RequestBody String text, @PathVariable("username")String username);
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

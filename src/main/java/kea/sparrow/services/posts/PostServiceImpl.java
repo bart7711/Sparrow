@@ -30,8 +30,9 @@ public class PostServiceImpl implements PostServiceInterface {
     }
 
     @Override
-    public Post createPost(Post post) {
-        return postRepo.save(post);
+    public Post createPost(String text,String username) {
+        return postRepo.save(new Post
+                (text,userRepo.findByUsername(username).orElseThrow(()-> new ResourceNotFoundException("WTF"))));
     }
 
     @Override

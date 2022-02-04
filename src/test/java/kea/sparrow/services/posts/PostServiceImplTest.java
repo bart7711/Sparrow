@@ -49,8 +49,7 @@ class PostServiceImplTest {
     void createPost() {
         User user = userRepo.findByUsername("bart").orElse(new User());
         Post post = new Post("Random text",user);
-        System.out.println(post.getCreateDateTime());
-        postService.createPost(post);
+        postService.createPost("post","bart");
         long count = postService.getAll().size();
         assertEquals(4,count);
         assertEquals("Random text", post.getText());

@@ -28,7 +28,7 @@ public class DTOConverter {
     }
 
     public User convertToUser(UserDTO userDTO){
-        return userRepository.findByUsername(userDTO.getUsername()).orElseThrow(() -> new ResourceNotFoundException("WTF"));
+        return modelMapper.map(userDTO, User.class);
     }
 
     public PostDTO convertToPostDTO(Post post){

@@ -6,6 +6,6 @@ import java.util.List;
 public interface PostServiceInterface {
     List<Post> getAll();
     Post getById(int id);
-    Post createPost(Post post);
+    Post createPost(String text,String username);
     void deletePost(int postID);
 }
