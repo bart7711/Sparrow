@@ -1,7 +1,7 @@
 package kea.sparrow.security.services;
 
 import kea.sparrow.entities.User;
-import kea.sparrow.security.repositories.UserRepository;
+import kea.sparrow.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

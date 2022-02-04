@@ -5,7 +5,7 @@ import kea.sparrow.dtos.PostDTO;
 import kea.sparrow.dtos.UserDTO;
 import kea.sparrow.entities.Post;
 import kea.sparrow.entities.User;
-import kea.sparrow.security.repositories.UserRepository;
+import kea.sparrow.repositories.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;

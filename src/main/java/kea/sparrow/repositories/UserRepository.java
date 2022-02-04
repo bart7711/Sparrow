@@ -1,4 +1,4 @@
-package kea.sparrow.security.repositories;
+package kea.sparrow.repositories;
 
 import kea.sparrow.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

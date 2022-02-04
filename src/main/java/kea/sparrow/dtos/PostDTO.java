@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,11 +18,13 @@ public class PostDTO {
     private String text;
     private List<String> hashtag = new ArrayList<>();
     private UserDTO user;
+    private LocalDateTime createDateTime;
 
-    public PostDTO(int id, String text, List<String> hashtag, UserDTO user) {
+    public PostDTO(int id, String text, List<String> hashtag, UserDTO user, LocalDateTime createDateTime) {
         this.id = id;
         this.text = text;
         this.hashtag = hashtag;
         this.user = user;
+        this.createDateTime=createDateTime;
     }
 }

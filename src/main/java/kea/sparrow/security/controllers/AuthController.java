@@ -11,7 +11,7 @@ import kea.sparrow.security.payload.request.SignupRequest;
 import kea.sparrow.security.payload.response.JwtResponse;
 import kea.sparrow.security.payload.response.MessageResponse;
 import kea.sparrow.security.repositories.RoleRepository;
-import kea.sparrow.security.repositories.UserRepository;
+import kea.sparrow.repositories.UserRepository;
 import kea.sparrow.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
