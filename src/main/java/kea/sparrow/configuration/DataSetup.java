@@ -56,8 +56,8 @@ public class DataSetup implements CommandLineRunner {
         postRepo.save(new Post("I love everyone", user2));
         postRepo.save(new Post("I want to die", user1));
         postRepo.save(new Post("I want to cry", user2));
-        postRepo.save(new Post("I think earth is flat", user1));
-        postRepo.save(new Post("Whatever", user2));
+        postRepo.save(new Post("I think earth is flat #facts", user1));
+        postRepo.save(new Post("#Whatever #No lol why", user2));
         postRepo.save(new Post("Test", user1));
 
 

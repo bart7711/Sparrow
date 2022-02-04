@@ -34,6 +34,7 @@ public class DTOConverter {
     public PostDTO convertToPostDTO(Post post){
         PostDTO postDTO = modelMapper.map(post, PostDTO.class);
         postDTO.setUser(convertToUserDTO(post.getUser()));
+        postDTO.setHashtags();
         return postDTO;
     }
     public Post convertToPost(PostDTO postDTO){

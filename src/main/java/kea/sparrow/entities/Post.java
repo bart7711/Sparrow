@@ -35,12 +35,8 @@ public class Post {
     @Transient
     List<String> hashtag = new ArrayList<>();
 
-
     public Post(String text, User user){
         this.text = text;
         this.user = user;
-        this.hashtag = Arrays.stream(text.split(" "))
-                .filter(word -> word.startsWith("#"))
-                .collect(Collectors.toList());
  }
 }

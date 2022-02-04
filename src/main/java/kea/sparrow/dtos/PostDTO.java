@@ -7,7 +7,9 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @NoArgsConstructor
 @Getter
@@ -26,5 +28,10 @@ public class PostDTO {
         this.hashtag = hashtag;
         this.user = user;
         this.createDateTime=createDateTime;
+    }
+    public void setHashtags(){
+        this.hashtag = Arrays.stream(this.text.split(" "))
+                .filter(word -> word.startsWith("#"))
+                .collect(Collectors.toList());
     }
 }
